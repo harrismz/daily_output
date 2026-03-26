@@ -132,7 +132,7 @@ class LostTimeController extends Controller
         ];
 
         $shiftB = [
-            ['id'=>10, 'time'=> '15-16', 'durasi'=> 5, 'jumat'=> 30 ],
+            ['id'=>10, 'time'=> '15-16', 'durasi'=> 15, 'jumat'=> 15],
             ['id'=>11, 'time'=> '16-17', 'durasi'=> 60, 'jumat'=> 60],
             ['id'=>12, 'time'=> '17-18', 'durasi'=> 60, 'jumat'=> 50],
             ['id'=>13, 'time'=> '18-19', 'durasi'=> 50, 'jumat'=> 50],

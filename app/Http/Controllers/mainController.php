@@ -47,7 +47,8 @@ class mainController extends Controller
         //order by time.
         if ($req->shift == 'B') {
             # code...
-        $do = $do->orderByRaw("CASE time when '16-17' then 1 when '17-18' then 2 when '18-19' then 3 when '19-20' then 4 when '20-21' then 5 when '21-22' then 6 when '22-23' then 7 when '23-24' then 8 when '00-01' then 9 when '01-02' then 10 when '02-03' then 11 else 12 end  ");
+        $do = $do->orderByRaw("CASE time when '15-16' then 1 when '16-17' then 2 when '17-18' then 3 when '18-19' then 4 when '19-20' then 5 when '20-21' then 6 when '21-22' then 7 when '22-23' then 8 when '23-24' then 9 when '00-01' then 10 when '01-02' then 11 else 12 end  ");
+        // $do = $do->orderByRaw("CASE time when '16-17' then 1 when '17-18' then 2 when '18-19' then 3 when '19-20' then 4 when '20-21' then 5 when '21-22' then 6 when '22-23' then 7 when '23-24' then 8 when '00-01' then 9 when '01-02' then 10 when '02-03' then 11 else 12 end  ");
         }
         if ($req->shift == 'N') {
             # code...
@@ -184,23 +185,9 @@ class mainController extends Controller
 
         ];
 
-        // $shiftN = [ //default
-        //     ['id' => 3, 'time' => '08-09', 'durasi' => 50, 'jumat' => 50],
-        //     ['id' => 4, 'time' => '09-10', 'durasi' => 60, 'jumat' => 60],
-        //     ['id' => 5, 'time' => '10-11', 'durasi' => 50, 'jumat' => 50],
-        //     ['id' => 6, 'time' => '11-12', 'durasi' => 60, 'jumat' => 60],
-        //     ['id' => 7, 'time' => '12-13', 'durasi' => 25, 'jumat' => 10],
-        //     ['id' => 8, 'time' => '13-14', 'durasi' => 60, 'jumat' => 50],
-        //     ['id' => 9, 'time' => '14-15', 'durasi' => 60, 'jumat' => 60],
-        //     ['id' => 10, 'time' => '15-16', 'durasi' => 5, 'jumat' => 30],
-        //     ['id' => 11, 'time' => '16-17', 'durasi' => 60, 'jumat' => 60],
-        //     ['id' => 12, 'time' => '17-18', 'durasi' => 60, 'jumat' => 60]
-
-        // ];
-        
         $shiftN = [
-            ['id' => 2, 'time' => '07-08', 'durasi' => 15, 'jumat' => 15],
-            ['id'=>3, 'time'=> '08-09', 'durasi'=> 60, 'jumat'=> 60 ],
+          // ['id'=>2, 'time'=> '07-08', 'durasi'=> 15, 'jumat'=> 50 ],
+             ['id'=>3, 'time'=> '08-09', 'durasi'=> 50, 'jumat'=> 50 ],
             ['id'=>4, 'time'=> '09-10', 'durasi'=> 60, 'jumat'=> 60 ],
             ['id'=>5, 'time'=> '10-11', 'durasi'=> 50, 'jumat'=> 50 ],
             ['id'=>6, 'time'=> '11-12', 'durasi'=> 60, 'jumat'=> 60 ],
@@ -213,18 +200,17 @@ class mainController extends Controller
         ];
 
         $shiftB = [
-            ['id'=>10, 'time'=> '15-16', 'durasi'=> 5, 'jumat'=> 30 ],
-            ['id'=>11, 'time'=> '16-17', 'durasi'=> 55, 'jumat'=> 55],
-            ['id'=>12, 'time'=> '17-18', 'durasi'=> 60, 'jumat'=> 60],
-            ['id'=>13, 'time'=> '18-19', 'durasi'=> 25, 'jumat'=> 25],
+            ['id'=>10, 'time'=> '15-16', 'durasi'=> 15, 'jumat'=> 15],
+            ['id'=>11, 'time'=> '16-17', 'durasi'=> 60, 'jumat'=> 60],
+            ['id'=>12, 'time'=> '17-18', 'durasi'=> 60, 'jumat'=> 50],
+            ['id'=>13, 'time'=> '18-19', 'durasi'=> 50, 'jumat'=> 50],
             ['id'=>14, 'time'=> '19-20', 'durasi'=> 60, 'jumat'=> 60],
             ['id'=>15, 'time'=> '20-21', 'durasi'=> 50, 'jumat'=> 50],
             ['id'=>16, 'time'=> '21-22', 'durasi'=> 60, 'jumat'=> 60],
-            ['id'=>17, 'time'=> '22-23', 'durasi'=> 40, 'jumat'=> 40],
-            ['id'=>18, 'time'=> '23-24', 'durasi'=> 60, 'jumat'=> 60],
+            ['id'=>17, 'time'=> '22-23', 'durasi'=> 25, 'jumat'=> 10],
+            ['id'=>18, 'time'=> '23-24', 'durasi'=> 60, 'jumat'=> 50],
             ['id'=>19, 'time'=> '00-01', 'durasi'=> 60, 'jumat'=> 60],
-            ['id'=>20, 'time'=> '01-02', 'durasi'=> 10, 'jumat'=> 10]
-
+            ['id'=>20, 'time'=> '01-02', 'durasi'=> 5, 'jumat'=> 30]
         ];
 
         if ( $shift == 'A' || $shift == 'a' ){
